@@ -16,7 +16,7 @@ var str = ' <header class="ngh_head">'+
            ' <a href="./say.html">说说</a>'+
        ' </li>'+
        '<li>'+
-           ' <a href="##">法学院</a>'+
+           ' <a href="./video.html">法学院</a>'+
        ' </li>'+
        '<li>'+
            ' <a href="##">APP</a>'+
