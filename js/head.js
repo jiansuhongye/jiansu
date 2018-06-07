@@ -4,7 +4,7 @@ var str = ' <header class="ngh_head">'+
     '<img src="../images/logo.jpg" alt="">'+
     '<ul>'+
       '  <li>'+
-            '<a href="##" style="color:#47b791;border-top:2px solid #47b791;">首页</a>'+
+            '<a href="./index.html">首页</a>'+
         '</li>'+
         '<li>'+
            ' <a href="##">法库</a>'+
@@ -13,7 +13,7 @@ var str = ' <header class="ngh_head">'+
        ' <a href="##">观点</a>'+
    ' </li>'+
    '<li>'+
-           ' <a href="##">说说</a>'+
+           ' <a href="./say.html">说说</a>'+
        ' </li>'+
        '<li>'+
            ' <a href="##">法学院</a>'+
@@ -62,23 +62,14 @@ var strfoot =  '<footer>'+
 $('body').prepend(str);
 $('body').append(strfoot)
 
-for(var i = 0; i<$('.head ul li a').length; i++){
-    if($('.head ul li a').eq(i).attr('style')){
-       $('.head ul li a').eq(i).attr('id','myselect')
-     };
-}
+
 
  
 $('.head ul li').hover(function(){
     $('.head ul li a').css({'color':'#333','border-top':'2px solid transparent'});
     $(this).find('a').css({'color':'#44b790','border-top':'2px solid #44b790'})
 },function(){
-    $('.head ul li a').css({'color':'#333','border-top':'2px solid transparent'});
-    for(var i = 0; i<$('.head ul li a').length; i++){
-        if($('.head ul li a').eq(i).attr('id')=='myselect'){
-            $('.head ul li a').eq(i).css({'color':'#44b790','border-top':'2px solid #44b790'});
-        }
-    }
+    
 })
 
 $('.go_top').click(function(){

@@ -1,0 +1,291 @@
+.say_ban {
+  width: 1200px;
+  height: 160px;
+  margin: 0 auto;
+}
+.say_ban img {
+  width: 100%;
+  height: 100%;
+}
+.say_contain {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+.say_info_more {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #f4f4f4;
+  color: #666;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.say_x {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+}
+.say_left {
+  padding-top: 40px;
+  height: auto;
+  width: 226px;
+  float: left;
+}
+.say_left h3 {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #44b790;
+}
+.say_left ul {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.say_left ul li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.say_left ul li img {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-top: 10px;
+}
+.say_left ul li span {
+  color: #333;
+  float: left;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.say_center {
+  width: 698px;
+  height: auto;
+  overflow: hidden;
+  float: left;
+}
+.say_center .say_info_box {
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  margin: 30px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.say_center .say_info_box h3 {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  font-size: 18px;
+}
+.say_center .say_info_box div {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.say_center .say_info_box div .info-left {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background: #fbf9fa;
+  color: #43b88e;
+  text-align: center;
+  float: left;
+}
+.say_center .say_info_box div .info-right {
+  width: 85%;
+  height: auto;
+  overflow: hidden;
+  float: right;
+}
+.say_center .say_info_box div .info-right h6 {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  font-size: 16px;
+}
+.say_center .say_info_box div .info-right p {
+  width: 100%;
+  height: 80px;
+  line-height: 1.8em;
+  font-size: 16px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  margin: 10px 0;
+}
+.say_center .say_info_box div .info-right div {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+}
+.say_center .say_info_box div .info-right div img {
+  width: 15px;
+  height: 15px;
+  margin-top: 8px;
+  float: left;
+}
+.say_center .say_info_box div .info-right div span {
+  float: left;
+  margin: 0 10px;
+  color: #999;
+  font-size: 12px;
+  cursor: pointer;
+}
+.say_center img {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  height: 40px;
+  cursor: pointer;
+}
+.say_center textarea {
+  display: block;
+  width: 90%;
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  margin-top: 10px;
+  resize: none;
+  padding: 10px;
+  color: #999;
+}
+.say_center .say_fb {
+  width: 90%;
+  height: 30px;
+  margin-top: 10px;
+  overflow: hidden;
+  line-height: 30px;
+}
+.say_center .say_fb img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  float: left;
+  margin-right: 10px;
+}
+.say_center .say_fb span {
+  color: #999;
+  font-size: 14px;
+  margin-right: 10px;
+  float: left;
+}
+.say_center .say_fb select {
+  float: right;
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin-right: 15px;
+}
+.say_center .say_fb div {
+  float: right;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  background: #ffc09f;
+}
+.say_right {
+  overflow: hidden;
+  width: 276px;
+  float: left;
+}
+.say_right h3 {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 16px;
+}
+.say_right ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 20px;
+}
+.say_right ul li {
+  width: 33.3%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  float: left;
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+}
+.say_right img {
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.say_right .other_say {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.say_right .other_say .say_other_title {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #999;
+  font-size: 16px;
+}
+.say_right .other_say .say_more {
+  width: 100%;
+  height: 40px;
+  background: #f7f7f7;
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  color: #999;
+  cursor: pointer;
+}
+.say_right .other_say .say_list {
+  width: 100%;
+  height: 100px;
+  padding: 25px 0;
+  overflow: hidden;
+}
+.say_right .other_say .say_list img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 25px;
+}
+.say_right .other_say .say_list div.say_info {
+  width: 200px;
+  height: 50px;
+  float: left;
+}
+.say_right .other_say .say_list div.say_info .say_name,
+.say_right .other_say .say_list div.say_info .say_text {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  color: #333;
+  font-size: 14px;
+}
+.say_right .other_say .say_list div.say_info .say_name span,
+.say_right .other_say .say_list div.say_info .say_text span {
+  cursor: pointer;
+}
