@@ -219,8 +219,17 @@
 .ngh_fk {
   width: 100%;
   height: 500px;
-  background: #ededed;
   padding: 72px 0;
+  position: relative;
+}
+.ngh_fk .bj {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../images/ban2.jpg');
+  background-size: 100% 100%;
 }
 .ngh_fk .ngh_fk_contain {
   width: 1200px;
@@ -253,6 +262,7 @@
   margin: 0 17px;
   background: #fff;
   float: left;
+  box-shadow: 0 0 10px #ccc;
 }
 .ngh_fk .ngh_fk_contain .ngh_fk_contain li .imgbox {
   width: 100%;
@@ -335,5 +345,76 @@
   height: 30px;
   margin-top: 10px;
   margin-right: 10px;
+  cursor: pointer;
+}
+.ngh_fk_contain {
+  position: relative;
+}
+.ngh_fk_contain .mywk {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  top: 20px;
+  height: 40px;
+}
+.ngh_fk_contain .mywk li {
+  display: inline-block;
+  padding: 0 20px;
+  cursor: pointer;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.wk_box {
+  width: 100%;
+  height: 230px;
+  margin-top: 50px;
+}
+.wk_box .wk_list {
+  width: 20%;
+  height: 230px;
+  margin: 0 2.5%;
+  border: 1px solid #e3ecf3;
+  float: left;
+  padding: 10px;
+  cursor: pointer;
+}
+.wk_box .wk_list img {
+  display: block;
+  width: 100%;
+  height: 140px;
+}
+.wk_box .wk_list .wk_title {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 15px;
+}
+.wk_box .wk_list .wk_dy {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+.wk_box .wk_list .wk_dy img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  float: left;
+}
+.wk_box .wk_list .wk_dy span {
+  color: #999;
+  float: left;
+  margin-right: 5px;
+  font-size: 14px;
+}
+.ngh_link {
+  width: 100%;
+  height: 400px;
+  background: url('../images/link.png');
+  background-size: 100% 100%;
   cursor: pointer;
 }

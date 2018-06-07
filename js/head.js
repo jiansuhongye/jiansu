@@ -38,7 +38,29 @@ var str = ' <header class="ngh_head">'+
 '</div>'+
 '</header>'
 
+
+var strfoot =  '<footer>'+
+'<div class="foot_contain">'+
+    '<div class="go_top">'+
+       ' <img src="../images/top.png" alt="">'+
+    '</div>'+
+    
+   ' <img src="../images/logo1.png" alt="">'+
+    '<ul>'+
+       ' <li>关于我们</li>'+
+        '<li>联系我们</li>'+
+        '<li>商业合作</li>'+
+        '<li>免责声明</li>'+
+    '</ul>'+
+    '<div class="bq">'+
+        '<div class="bq-top">COPYRIGHT 2017 - 泰安市检查技术研究所</div>'+
+        '<div class="bq-bottom">中国地区</div>'+
+    '</div>'+
+'</div>'+
+'</footer>'
+
 $('body').prepend(str);
+$('body').append(strfoot)
 
 for(var i = 0; i<$('.head ul li a').length; i++){
     if($('.head ul li a').eq(i).attr('style')){
@@ -58,3 +80,7 @@ $('.head ul li').hover(function(){
         }
     }
 })
+
+$('.go_top').click(function(){
+    $('html,body').animate({scrollTop: '0px'}, 1000);
+});
