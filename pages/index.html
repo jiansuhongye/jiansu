@@ -207,25 +207,25 @@
                 <ul class="ngh_fk_contain">
                     <li>
                         <div class="imgbox">
-                            <img src="../images/flfg1.png" alt="">
+                            <img src="../images/flfg1.png" flag="false" alt="">
                             <h6 style="color:#44b790">法律法规</h6>
                         </div>
                     </li>
                     <li>
                         <div class="imgbox">
-                            <img src="../images/sfjs.png" alt="">
+                            <img src="../images/sfjs.png" flag="false" alt="">
                             <h6>司法解释</h6>
                         </div>
                     </li>
                     <li>
                         <div class="imgbox">
-                            <img src="../images/jdal.png" alt="">
+                            <img src="../images/jdal.png" flag="false" alt="">
                             <h6>经典案例</h6>
                         </div>
                     </li>
                     <li>
                         <div class="imgbox">
-                            <img src="../images/basw.png" alt="">
+                            <img src="../images/basw.png"  flag="false" alt="">
                             <h6>办案实务</h6>
                         </div>
                     </li>
@@ -251,3 +251,19 @@
 </html>
 <script src="../js/jquery.js"></script>
 <script src="../js/head.js"></script>
+<script>
+ 
+    var src = ['../images/flfg.png','../images/sfjs.png','../images/jdal.png','../images/basw.png']
+    var src1 = ['../images/flfg1.png','../images/sfjs1.png','../images/jdal1.png','../images/basw1.png']
+    $('.ngh_fk_contain li').hover(function(){
+        var index = $(this).index();
+        for(var i =0; i<$('.imgbox img').length; i++){
+            $('.imgbox img').eq(i).attr('src',src[i]);
+            $('.imgbox h6').eq(i).css({'color':'#cacaca'});
+        }
+        $('.imgbox img').eq(index).attr('src',src1[index]);
+        $('.imgbox h6').eq(index).css({'color':'#44b790'});
+    },function(){
+
+    })
+</script>

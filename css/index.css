@@ -194,6 +194,7 @@
   background: #fff;
   float: left;
   box-shadow: 0 0 10px #ccc;
+  cursor: pointer;
 }
 .ngh_fk .ngh_fk_contain .ngh_fk_contain li .imgbox {
   width: 100%;
