@@ -12,75 +12,6 @@
   background: url("../images/ban1.jpg");
   background-size: 100% 100%;
 }
-.banner .login {
-  width: 425px;
-  height: 330px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -165px;
-  background: rgba(0, 0, 0, 0.3);
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  padding: 30px 50px;
-}
-.banner .login h6 {
-  color: #f9f9f9;
-  font-size: 16px;
-  margin: 10px 0;
-}
-.banner .login h3 {
-  color: #ffff;
-  font-size: 24px;
-  margin: 20px 0;
-}
-.banner .login .ngh_g {
-  width: 30px;
-  height: 4px;
-  background: #fff;
-  border-radius: 2px;
-}
-.banner .login .login_text {
-  width: 100%;
-  height: 30px;
-  background: #fff;
-  margin: 20px 0;
-}
-.banner .login .login_text input {
-  border: none;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  padding-left: 15px;
-  color: #31a080;
-}
-.banner .login .login_text input::-webkit-input-placeholder,
-.banner .login .login_text textarea::-webkit-input-placeholde {
-  color: #31a080;
-}
-.banner .login .login_text input:-moz-placeholder,
-.banner .login .login_text textarea:-moz-placeholder {
-  color: #31a080;
-}
-.banner .login .login_text input::-moz-placeholder,
-.banner .login .login_text textarea::-moz-placeholder {
-  color: #31a080;
-}
-.banner .login .login_text input:-ms-input-placeholder,
-.banner .login .login_text textarea:-ms-input-placeholder {
-  color: #31a080;
-}
-.banner .login .login_text button {
-  width: 48%;
-  height: 100%;
-  display: block;
-  float: left;
-  border: none;
-  background: #31a080;
-  color: #fff;
-  cursor: pointer;
-}
 .ngh_gd {
   width: 100%;
   height: 500px;
@@ -228,7 +159,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: url('../images/ban2.jpg');
+  background: url("../images/ban2.jpg");
   background-size: 100% 100%;
 }
 .ngh_fk .ngh_fk_contain {
@@ -414,7 +345,7 @@
 .ngh_link {
   width: 100%;
   height: 400px;
-  background: url('../images/link.png');
+  background: url("../images/link.png");
   background-size: 100% 100%;
   cursor: pointer;
 }

@@ -40,6 +40,7 @@
   height: 40px;
   line-height: 40px;
   color: #44b790;
+  border-top: 1px solid #eee;
 }
 .say_left ul {
   width: 100%;
@@ -113,6 +114,9 @@
   line-height: 30px;
   color: #333;
   font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .say_center .say_info_box div .info-right p {
   width: 100%;
@@ -239,7 +243,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  margin-top: 20px;
+  border-top: 1px solid #eee;
 }
 .say_right .other_say .say_other_title {
   width: 100%;

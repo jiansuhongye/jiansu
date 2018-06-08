@@ -78,7 +78,7 @@
                 </select>
 
             </div>
-            <div class="say_info_box">
+            <!-- <div class="say_info_box">
                 <h3>朋友酒驾被抓，公职工作没了，酒家真的不可饶恕吗？</h3>
                 <div>
                     <div class="info-left">
@@ -169,25 +169,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="say_info_more">查看更多</div>
         </div>
-        <div class="say_right">
-            <h3>工具箱</h3>
-            <ul>
-                <li>法律条文</li>
-                <li>司法解释</li>
-                <li>热点案件</li>
-                <li>专家解读</li>
-                <li>经典案列</li>
-            </ul>
-            <img src="../images/ewm.png" alt="">
+        <div class="say_right" style="padding-top:40px">
+            
+           
 
             <div class="other_say">
                 <div class="say_other_title">
                     其他人关注的说说
                 </div>
-                <div class="say_list">
+                <!-- <div class="say_list">
                     <img src="../images/tx1.jpg" alt="">
                     <div class="say_info">
                         <div class="say_name">
@@ -236,7 +229,7 @@
                         </div>
                         <div class="say_text" style="color:#999">写了421.8k字·861人喜欢</div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="say_more">查看更多</div>
             </div>
@@ -248,3 +241,66 @@
 </html>
 <script src="../js/jquery.js"></script>
 <script src="../js/head.js"></script>
+
+
+<script>
+    //关注说说
+    $.ajax({
+        type: "GET",
+        url: "https://zhihu-daily.leanapp.cn/api/v1/themes/5",
+        success: function (msg) {
+            var data = msg.THEMEDES.editors;
+            for (var i = 0; i < data.length; i++) {
+                var str = '<div class="say_list">' +
+                    '<a href="' + data[i].url + '"><img src="' + data[i].avatar + '"></a>' +
+                    '<div class="say_info">' +
+                    '<div class="say_name">' +
+                    data[i].name +
+                    '<span style="float:right;color:#5dc2a0">+关注</span>' +
+                    ' </div>' +
+                    '<div class="say_text" style="color:#999">写了421.8k字·861人喜欢</div>' +
+                    ' </div>' +
+                    '</div>'
+                $('.say_more').before(str);
+            }
+        }
+    });
+
+    function rb(arr) {
+        $.ajax({
+            type: 'get',
+            url: 'https://zhihu-daily.leanapp.cn/api/v1/themes/'+arr,
+            success: function (data) {
+                var msg = data.THEMEDES;
+                console.log(msg)
+                for (var i = 0; i < msg.editors.length; i++) {
+                    var str = '<div class="say_info_box">' +
+                        '<h3>' + msg.description + '</h3>' +
+                        '<div>' +
+                        '<div class="info-left">' +
+                        '422' +
+                        '</div>' +
+                        '<div class="info-right">' +
+                        '<h6>' + msg.editors[i].name + '&nbsp;' + msg.editors[i].bio +
+                        '<span style="color:#999">&nbsp;·&nbsp;出庭的那些事</span>' +
+                        '</h6>' +
+                        '<p>' +
+                        ' <span style="color:#999;">话题摘要：</span> 律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者' +
+                        '</p>' +
+                        '<div>' +
+                        '<span> 关注问题</span>' +
+                        ' <img src="../images/hf1.png" alt="">' +
+                        '<span>32条评论</span>' +
+                        ' <span>' +
+                        '<span style="font-size:18px">·</span>申请转载</span>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>'
+                    $('.say_info_more').before(str);
+                }
+            }
+        })
+    }
+    rb(2)
+</script>
