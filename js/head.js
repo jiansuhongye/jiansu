@@ -10,7 +10,7 @@ var str =
   ' <a href="##">法库</a>' +
   " </li>" +
   "<li>" +
-  ' <a href="##">观点</a>' +
+  ' <a href="../pages/tabpage.html">观点</a>' +
   " </li>" +
   "<li>" +
   ' <a href="./say.html">说说</a>' +
