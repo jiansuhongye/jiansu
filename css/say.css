@@ -72,7 +72,11 @@
   overflow: hidden;
   float: left;
 }
-.say_center .say_info_box {
+.say_center .mysay_list {
+  width: 100%;
+  height: auto;
+}
+.say_center .mysay_list .say_info_box {
   width: 90%;
   height: auto;
   overflow: hidden;
@@ -80,20 +84,20 @@
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
-.say_center .say_info_box h3 {
+.say_center .mysay_list .say_info_box h3 {
   width: 100%;
   height: 30px;
   line-height: 30px;
   color: #333;
   font-size: 18px;
 }
-.say_center .say_info_box div {
+.say_center .mysay_list .say_info_box div {
   width: 100%;
   height: auto;
   overflow: hidden;
   margin-top: 10px;
 }
-.say_center .say_info_box div .info-left {
+.say_center .mysay_list .say_info_box div .info-left {
   width: 70px;
   height: 30px;
   line-height: 30px;
@@ -102,13 +106,13 @@
   text-align: center;
   float: left;
 }
-.say_center .say_info_box div .info-right {
+.say_center .mysay_list .say_info_box div .info-right {
   width: 85%;
   height: auto;
   overflow: hidden;
   float: right;
 }
-.say_center .say_info_box div .info-right h6 {
+.say_center .mysay_list .say_info_box div .info-right h6 {
   width: 100%;
   height: 30px;
   line-height: 30px;
@@ -118,7 +122,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.say_center .say_info_box div .info-right p {
+.say_center .mysay_list .say_info_box div .info-right p {
   width: 100%;
   height: 80px;
   line-height: 1.8em;
@@ -131,19 +135,19 @@
   font-size: 14px;
   margin: 10px 0;
 }
-.say_center .say_info_box div .info-right div {
+.say_center .mysay_list .say_info_box div .info-right div {
   width: 100%;
   height: 30px;
   line-height: 30px;
   overflow: hidden;
 }
-.say_center .say_info_box div .info-right div img {
+.say_center .mysay_list .say_info_box div .info-right div img {
   width: 15px;
   height: 15px;
   margin-top: 8px;
   float: left;
 }
-.say_center .say_info_box div .info-right div span {
+.say_center .mysay_list .say_info_box div .info-right div span {
   float: left;
   margin: 0 10px;
   color: #999;

@@ -170,6 +170,7 @@
                     </div>
                 </div>
             </div> -->
+            <div class="mysay_list"></div>
             <div class="say_info_more">查看更多</div>
         </div>
         <div class="say_right" style="padding-top:40px">
@@ -265,11 +266,53 @@
             }
         }
     });
-
+    var saylist = [
+        {
+            name:"出庭的那些事",
+            num:2
+        },
+        {
+            name:"人文自然",
+            num:3
+        },
+        {
+            name:"生活家",
+            num:4
+        },
+        {
+            name:"案例说",
+            num:5
+        },
+        {
+            name:"办案吐槽",
+            num:6
+        },
+        {
+            name:"公诉人视角",
+            num:7
+        },
+        {
+            name:"闲趣",
+            num:8
+        },
+        {
+            name:"寻医问药",
+            num:9
+        },
+        {
+            name:"公诉人风采",
+            num:10
+        },
+        {
+            name:"更多标签",
+            num:11
+        }
+        
+    ]
     function rb(arr) {
         $.ajax({
             type: 'get',
-            url: 'https://zhihu-daily.leanapp.cn/api/v1/themes/'+arr,
+            url: 'https://zhihu-daily.leanapp.cn/api/v1/themes/'+arr.num,
             success: function (data) {
                 var msg = data.THEMEDES;
                 console.log(msg)
@@ -282,7 +325,7 @@
                         '</div>' +
                         '<div class="info-right">' +
                         '<h6>' + msg.editors[i].name + '&nbsp;' + msg.editors[i].bio +
-                        '<span style="color:#999">&nbsp;·&nbsp;出庭的那些事</span>' +
+                        '<span style="color:#999">&nbsp;·&nbsp;'+arr.name+'</span>' +
                         '</h6>' +
                         '<p>' +
                         ' <span style="color:#999;">话题摘要：</span> 律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者律师、法律、房地产、法学话题优秀回答者' +
@@ -297,10 +340,16 @@
                         '</div>' +
                         '</div>' +
                         '</div>'
-                    $('.say_info_more').before(str);
+                    // $('.say_info_more').before(str);
+                    $('.mysay_list').append(str)
                 }
             }
         })
     }
-    rb(2)
+    rb(saylist[0]);
+    $('.say_left ul li').on('click',function(){
+        var index = $(this).index();
+        $('.mysay_list').html('');
+        rb(saylist[index]);
+    })
 </script>
