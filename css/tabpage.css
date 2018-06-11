@@ -81,6 +81,7 @@ h3 {
   color: #333;
 }
 .tab_box {
+  margin-bottom: 50px;
   background-color: #fff;
 }
 .tab_box li {
@@ -197,11 +198,11 @@ h3 {
 .fixBox .fixBox_top {
   width: 100%;
   position: relative;
+  padding: 5px;
 }
 .fixBox .fixBox_top .oneimg {
-  width: 186px;
+  width: 100%;
   height: 164px;
-  margin: 5px 0px 0px 5px;
 }
 .fixBox .fixBox_top .twoimg {
   width: 102px;
@@ -614,4 +615,31 @@ i {
 }
 .martop100 {
   margin-top: 100px;
+}
+.pad100Six {
+  padding-left: 100px;
+  position: relative;
+  padding-right: 100px;
+}
+.six li .pad100Six .color333 {
+  color: #333;
+}
+.six li .pad100Six .colorddd {
+  color: #dddddd;
+}
+.six .marbom {
+  margin-bottom: 18px;
+}
+.headphotoR {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: url('../images//head.jpg') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 10px;
+  top: -24px;
+}
+.martop40 {
+  margin-top: 40px;
 }
