@@ -8,8 +8,10 @@
     <title>简·诉</title>
     <link rel="icon" href="../images/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/toast.css">
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/index.css">
+    
 
 </head>
 
@@ -31,7 +33,7 @@
                 <h6>View</h6>
             </div>
             <div class="ngh_gd_contain">
-                <div class="ngh_tx">
+                <!-- <div class="ngh_tx">
                     <img src="../images/tx1.jpg" alt="">
                 </div>
                 <div class="gd_contain">
@@ -41,7 +43,7 @@
                     </p>
                     <p class="ngh_gd_text">今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆今年来，数字图书馆</p>
                     <div class="ngh_y" style="text-align:right;margin-top:50px;">”</div>
-                </div>
+                </div> -->
             </div>
             <div class="ngh_gd_right">
                 <!-- <a href="##">more&nbsp;&nbsp;&nbsp;></a> -->
@@ -88,7 +90,7 @@
             <div class="ngh_fk_title">说说</div>
             <h6>Say Something</h6>
             <div class="Say_box">
-                <div class="say_say">
+                <!-- <div class="say_say">
                     <div class="say_info">
                         <img src="../images/tx1.jpg" alt="">
                         <div class="info">
@@ -131,7 +133,7 @@
                         <img src="../images/dz.png" style="width:22px;height:20px;margin-top:15px">
                         <span>33</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -250,6 +252,7 @@
 
 </html>
 <script src="../js/jquery.js"></script>
+<script src="../js/toast.js"></script>
 <script src="../js/head.js"></script>
 <script>
  
@@ -266,4 +269,69 @@
     },function(){
 
     })
+
+
+    
+</script>
+<script>
+    var url = 'http://116.62.16.146:8080';
+    
+    //查询说说
+    $.ajax({
+        type:'get',
+        url:url+'/say/getList',
+        success:function(data){
+            
+            if(data.code == '200'){
+              for(var i = 0;i<2;i++){
+                $('.Say_box').append('<div class="say_say">'+
+                    '<div class="say_info">'+
+                        '<img src="../images/tx1.jpg" alt="">'+
+                       ' <div class="info">'+
+                           ' <span style="color:#333;margin:0 15px">'+data.data[i].createBy+'</span>'+
+                            '<span style="color:#cacaca;">'+data.data[i].createTime+'</span>'+
+                        '</div>'+
+
+                    '</div>'+
+                    '<div class="say_title">'+data.data[i].title+'</div>'+
+                    '<p>'+data.data[i].content+
+                    '</p>'+
+                    '<div class="ckhfdz">'+
+                        '<img src="../images/ck.png" alt="">'+
+                       ' <span>1648</span>'+
+                       ' <img src="../images/hf1.png" alt="" style="width:22px;height:20px;margin-top:15px">'+
+                       ' <span>39</span>'+
+                       ' <img src="../images/dz.png" style="width:22px;height:20px;margin-top:15px">'+
+                        '<span>33</span>'+
+                    '</div>'+
+                '</div>')
+              }
+            }
+           
+        }
+    })
+
+
+
+    //查询观点
+       $.ajax({
+           url:url+'/article/findByUsername',
+           type:'get',
+           success:function(data){
+               console.log(data);
+               $('.ngh_gd_contain').append('<div class="ngh_tx">'+
+                    '<img src="../images/tx1.jpg" alt="">'+
+                '</div>'+
+                '<div class="gd_contain">'+
+                    '<div class="ngh_y">“</div>'+
+                    '<p class="ngh_title">'+data.data[0].title+
+                    '</p>'+
+                    '<p class="ngh_gd_text">'+data.data[0].content+'</p>'+
+                    '<div class="ngh_y" style="text-align:right;margin-top:50px;">”'+'</div>'+
+               ' </div>')
+               
+           }
+       })
+    
+    
 </script>

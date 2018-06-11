@@ -34,6 +34,19 @@
   height: auto;
   width: 226px;
   float: left;
+  position: relative;
+}
+.say_left .ngh_fbsay {
+  width: 80%;
+  height: 41px;
+  line-height: 41px;
+  text-align: center;
+  background: #ffc09f;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
 }
 .say_left h3 {
   width: 100%;
@@ -296,4 +309,35 @@
 .say_right .other_say .say_list div.say_info .say_name span,
 .say_right .other_say .say_list div.say_info .say_text span {
   cursor: pointer;
+}
+.edui-editor-body {
+  background: #f5f5f5!important;
+}
+.fwb {
+  width: 1200px;
+  height: 550px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #d4d4d4;
+  box-shadow: 2px 2px 5px #d3d6da;
+  background: #f5f5f5;
+  z-index: 9999999999999;
+}
+.fwb .btn {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #ffc09f;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
 }
