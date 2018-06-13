@@ -11,11 +11,11 @@
   width: 1200px;
   height: auto;
   overflow: hidden;
-  padding: 50px 0;
+  padding-bottom: 50px;
   margin: 0 auto;
 }
 .say_info_more {
-  width: 100%;
+  width: 90%;
   height: 30px;
   line-height: 30px;
   text-align: center;
@@ -53,12 +53,10 @@
   height: 40px;
   line-height: 40px;
   color: #44b790;
-  border-top: 1px solid #eee;
 }
 .say_left ul {
   width: 100%;
   height: auto;
-  margin-top: 30px;
 }
 .say_left ul li {
   width: 100%;
@@ -84,13 +82,18 @@
   height: auto;
   overflow: hidden;
   float: left;
+  padding-top: 40px;
 }
 .say_center .mysay_list {
-  width: 100%;
+  width: 90%;
   height: auto;
+  border: 1px solid #eee;
+  margin: 20px 0;
+  padding: 0 10px;
+  border-radius: 4px;
 }
 .say_center .mysay_list .say_info_box {
-  width: 90%;
+  width: 100%;
   height: auto;
   overflow: hidden;
   margin: 30px 0;
@@ -173,55 +176,6 @@
   height: 40px;
   cursor: pointer;
 }
-.say_center textarea {
-  display: block;
-  width: 90%;
-  height: 80px;
-  border-radius: 4px;
-  border: 1px solid #eee;
-  margin-top: 10px;
-  resize: none;
-  padding: 10px;
-  color: #999;
-}
-.say_center .say_fb {
-  width: 90%;
-  height: 30px;
-  margin-top: 10px;
-  overflow: hidden;
-  line-height: 30px;
-}
-.say_center .say_fb img {
-  width: 20px;
-  height: 20px;
-  margin-top: 5px;
-  float: left;
-  margin-right: 10px;
-}
-.say_center .say_fb span {
-  color: #999;
-  font-size: 14px;
-  margin-right: 10px;
-  float: left;
-}
-.say_center .say_fb select {
-  float: right;
-  border: none;
-  width: 100px;
-  height: 30px;
-  margin-right: 15px;
-}
-.say_center .say_fb div {
-  float: right;
-  width: 100px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  background: #ffc09f;
-}
 .say_right {
   overflow: hidden;
   width: 276px;
@@ -231,7 +185,6 @@
   width: 100%;
   height: 40px;
   line-height: 40px;
-  border-bottom: 1px solid #eee;
   color: #333;
   font-size: 16px;
 }
@@ -260,7 +213,6 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  border-top: 1px solid #eee;
 }
 .say_right .other_say .say_other_title {
   width: 100%;
@@ -310,34 +262,73 @@
 .say_right .other_say .say_list div.say_info .say_text span {
   cursor: pointer;
 }
-.edui-editor-body {
-  background: #f5f5f5!important;
-}
-.fwb {
-  width: 1200px;
-  height: 550px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
-  border: 1px solid #d4d4d4;
-  box-shadow: 2px 2px 5px #d3d6da;
-  background: #f5f5f5;
-  z-index: 9999999999999;
-}
-.fwb .btn {
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #ffc09f;
-  color: #fff;
-  margin: 0 auto;
-  margin-top: 20px;
-  cursor: pointer;
+.fb_contain {
   border-radius: 4px;
+  border: 1px solid #eee;
+  height: 120px;
+  width: 90%;
+  margin-top: 10px;
+  color: #999;
+}
+.fb_contain .fb_input {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #eee;
+}
+.fb_contain .fb_input input {
+  width: 100%;
+  display: block;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding-left: 10px;
+}
+.fb_contain textarea {
+  display: block;
+  width: 100%;
+  height: 80px;
+  resize: none;
+  padding-left: 10px;
+  color: #999;
+  border: none;
+  background: transparent;
+  margin-top: 10px;
+}
+.say_fb {
+  width: 90%;
+  height: 30px;
+  margin-top: 10px;
+  overflow: hidden;
+  line-height: 30px;
+}
+.say_fb img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  float: left;
+  margin-right: 10px;
+}
+.say_fb span {
+  color: #999;
+  font-size: 14px;
+  margin-right: 10px;
+  float: left;
+}
+.say_fb select {
+  float: right;
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin-right: 15px;
+}
+.say_fb div {
+  float: right;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  background: #ffc09f;
 }

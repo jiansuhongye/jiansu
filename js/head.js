@@ -10,7 +10,7 @@ var str =
   ' <a href="##">法库</a>' +
   " </li>" +
   "<li>" +
-  ' <a href="../pages/tabpage.html">观点</a>' +
+  ' <a href="##">观点</a>' +
   " </li>" +
   "<li>" +
   ' <a href="./say.html">说说</a>' +
@@ -98,7 +98,8 @@ var strfoot =
 
 $("body").prepend(str);
 $("body").append(strfoot);
-
+var index = localStorage.getItem('index');
+$(".head ul li a").eq(index).css({ 'color': "#44b790", "border-top": "2px solid #44b790" });
 $(".head ul li").hover(
   function() {
     $(".head ul li a").css({'color': "#333","border-top": "2px solid transparent"});
@@ -169,6 +170,7 @@ $(".login_text button").eq(0).on("click", function() {
             flag = true
             localStorage.setItem('username',$('.login_text input').eq(0).val());
             localStorage.setItem('password',$('.login_text input').eq(1).val());
+            localStorage.setItem('nickname',data.data.nickname);
             $(".login").eq(0).css({ display: "none" });
             $(".login").eq(1).css({ display: "none" });
             
@@ -207,3 +209,13 @@ $(".login_text button").eq(3).on("click", function() {
   })
   
 });
+
+
+//观点进入要判断登录状态
+$('.head ul li a').eq(2).on('click',function(){
+  if(localStorage.getItem('username')){
+    window.location.href = '../pages/tabpage.html'
+  }else{
+    Alert('未登录，请先登录。')
+  }
+})

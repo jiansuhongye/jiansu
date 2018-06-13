@@ -8,19 +8,12 @@
     <title>简·诉</title>
     <link rel="icon" href="../images/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/toast.css">
     <link rel="stylesheet" href="../css/head.css">
     <link rel="stylesheet" href="../css/say.css">
-    <link rel="stylesheet" href="../css/umeditor.css">
     <script src="../js/jquery.js"></script>
+    <script src="../js/toast.js"></script>
     
-    <script src="../js/umeditor.config.js"></script>
-    <script src="../js/umeditor.min.js"></script>
-    <script src="../js/zh-cn.js"></script>
-    <style>
-      .edui-container,#myEditor{
-          width: 100%!important;
-      }
-    </style>
 </head>
 
 <body>
@@ -29,7 +22,7 @@
     </div>
     <div class="say_contain">
         <div class="say_left">
-            <div class="ngh_fbsay">发布说说</div>
+            
             <h3>说说分类</h3>
             <ul>
                 <li>
@@ -76,9 +69,15 @@
             </ul>
         </div>
         <div class="say_center">
-            <img src="../images/rsay.png" alt="" style="height:41px;">
-            <!-- <textarea></textarea> -->
-            <!-- <div class="say_fb">
+            <!-- <img src="../images/rsay.png" alt="" style="height:41px;"> -->
+            <div class="fb_contain">
+                <div class="fb_input">
+                    <input type="text" placeholder="请输入标题">
+                </div>
+                <textarea  placeholder="请输入内容"></textarea>
+            </div>
+            
+            <div class="say_fb">
                 <img src="../images/bq.png" alt="">
                 <span>表情</span>
                 <img src="../images/tp.png" alt="">
@@ -88,8 +87,20 @@
                     <option value="公开">公开</option>
                     <option value="仅自己可见">仅自己可见</option>
                 </select>
+                <select>
+                        <option value="1">出庭的那些事</option>
+                        <option value="2">人文自然</option>
+                        <option value="3">生活家</option>
+                        <option value="4">案列说</option>
+                        <option value="5">办案吐槽</option>
+                        <option value="6">公诉人视角</option>
+                        <option value="7">闲趣</option>
+                        <option value="8">寻医问药</option>
+                        <option value="9">公诉人风采</option>
+                        <option value="10">更多标签</option> 
+                </select>
 
-            </div> -->
+            </div>
             <!-- <div class="say_info_box">
                 <h3>朋友酒驾被抓，公职工作没了，酒家真的不可饶恕吗？</h3>
                 <div>
@@ -136,12 +147,7 @@
         </div>
     </div>
 
-    <div class="fwb" style="display:none">
-            <script type="text/plain" id="myEditor" style="width:100%;height:440px">
-                <p>这里我可以写一些输入提示</p>
-            </script>
-            <div class="btn">完成</div>
-    </div>
+  
     
     <div class="say_x"></div>
 
@@ -151,14 +157,8 @@
 <script src="../js/head.js"></script>
 
 <script>
-    //富文本
-    var um = UM.getEditor('myEditor');
-    $('.ngh_fbsay').on('click',function(){
-        $('.fwb').css({'display':'block'})
-    })
-    $('.fwb .btn').on('click',function(){
-        $('.fwb').css({'display':'none'})
-    })
+    //初始化第几页
+    localStorage.setItem('index',3)
     //关注说说
     $.ajax({
         type: "GET",
@@ -267,4 +267,32 @@
         $('.mysay_list').html('');
         rb(saylist[index]);
     })
+
+    var url = 'http://116.62.16.146:8080'
+    //发布说说
+    function fb_say(){
+        $.ajax({
+            url:url+'/say/insert',
+            type:'post',
+            data:{
+                title:$('.fb_input input').val(),
+                content:$('.fb_contain textarea').val(),
+                type:$('.say_fb select').eq(1).val(),
+                username:localStorage.getItem('username')
+            },
+            success:function(data){
+                if(data.code == 200){
+                    Alert('发布成功&nbsp;&nbsp;&nbsp;&nbsp;'+data.data.createTime)
+                }
+            }
+        })
+    }
+    $('.say_fb div').on('click',function(){
+        if(!localStorage.getItem('username')){
+            Alert('请先登录');
+        }else{
+            fb_say()
+        }
+        
+    });
 </script>

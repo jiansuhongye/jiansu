@@ -255,7 +255,7 @@
 <script src="../js/toast.js"></script>
 <script src="../js/head.js"></script>
 <script>
- 
+    //法库鼠标移入移出
     var src = ['../images/flfg.png','../images/sfjs.png','../images/jdal.png','../images/basw.png']
     var src1 = ['../images/flfg1.png','../images/sfjs1.png','../images/jdal1.png','../images/basw1.png']
     $('.ngh_fk_contain li').hover(function(){
@@ -268,14 +268,12 @@
         $('.imgbox h6').eq(index).css({'color':'#44b790'});
     },function(){
 
-    })
-
-
-    
+    })  
 </script>
 <script>
     var url = 'http://116.62.16.146:8080';
-    
+    //初始化第几页
+    localStorage.setItem('index',0)
     //查询说说
     $.ajax({
         type:'get',
@@ -318,18 +316,30 @@
            url:url+'/article/findByUsername',
            type:'get',
            success:function(data){
-               console.log(data);
-               $('.ngh_gd_contain').append('<div class="ngh_tx">'+
-                    '<img src="../images/tx1.jpg" alt="">'+
-                '</div>'+
-                '<div class="gd_contain">'+
-                    '<div class="ngh_y">“</div>'+
-                    '<p class="ngh_title">'+data.data[0].title+
-                    '</p>'+
-                    '<p class="ngh_gd_text">'+data.data[0].content+'</p>'+
-                    '<div class="ngh_y" style="text-align:right;margin-top:50px;">”'+'</div>'+
-               ' </div>')
-               
+               for(let i = 0; i<6; i++){
+                    $('.ngh_gd_contain').append('<div class="ngh_gd_p"><div class="ngh_tx">'+
+                        '<img src="../images/tx1.jpg" alt="">'+
+                    '</div>'+
+                    '<div class="gd_contain">'+
+                        '<div class="ngh_y">“</div>'+
+                        '<p class="ngh_title">'+data.data[i].title+
+                        '</p>'+
+                        '<p class="ngh_gd_text">'+data.data[i].content+'</p>'+
+                        '<div class="ngh_y" style="text-align:right;margin-top:50px;">”'+'</div>'+
+                ' </div></div>')
+               }
+               $('.ngh_gd_p').eq(0).css('z-index','2');
+               $('.ngh_gd_right ul li').on('click',function (){
+                  var index = $(this).index();
+                  $('.ngh_gd_right ul li').find('.g').css('background','transparent');
+                  $('.ngh_gd_right ul li').find('.text').css('color','#cacaca');
+                  $('.ngh_gd_right ul li').find('.dian').css('background','#cacaca');
+                  $('.ngh_gd_right ul li').find('.g').eq(index).css('background','#44b790');
+                  $('.ngh_gd_right ul li').find('.text').eq(index).css('color','#44b790');
+                  $('.ngh_gd_right ul li').find('.dian').eq(index).css('background','#44b790');
+                  $('.ngh_gd_p').css('z-index','1');
+                  $('.ngh_gd_p').eq(index).css('z-index','2');
+               })  
            }
        })
     

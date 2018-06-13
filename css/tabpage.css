@@ -87,6 +87,7 @@ h3 {
 }
 .tab_box li {
   width: 76%;
+  margin-bottom: 30px;
 }
 .tab_box li span {
   margin: 0 5px 0 0;
@@ -236,6 +237,7 @@ p {
   float: right;
   box-sizing: border-box;
   padding: 0 22px 0px 20px;
+  cursor: pointer;
 }
 .titleing {
   width: 100%;
@@ -279,13 +281,20 @@ p {
 h2 {
   font-weight: normal;
   color: #333;
+  font-size: 18px;
 }
 .mapbot {
   margin-bottom: 20px;
 }
 .pbot {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 70px;
+  line-height: 1.6em;
 }
 .hei170 {
   height: 170px;
@@ -320,7 +329,7 @@ span {
 .txtP {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 .mod_feed_lst .feed .ft .op {
@@ -335,7 +344,7 @@ span {
   padding: 0 0 10px 70px;
   line-height: 1.5;
   min-height: 55px;
-  _height: 55px;
+  height: 55px;
   /* word-wrap: break-word; */
 }
 .op a {
@@ -403,8 +412,9 @@ a {
   color: #43b891;
 }
 .TextField {
-  border: 1px solid #ccc;
-  height: 120px;
+  border: 1px solid #eee;
+  height: 75px;
+  margin-top: 10px;
 }
 .box_extra .feed_like {
   position: relative;
@@ -597,11 +607,7 @@ i {
   background-size: 632px 388px;
   background-position: -296px -104px;
 }
-.mod_comment_poster_wrapper {
-  margin-top: 20px;
-}
 .pad100 {
-  padding-left: 100px;
   position: relative;
 }
 .headphoto {
@@ -643,4 +649,89 @@ i {
 }
 .martop40 {
   margin-top: 40px;
+}
+.fb {
+  width: 800px;
+  height: 200px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 99999999999999;
+}
+.fb .fb_contain {
+  border-radius: 4px;
+  border: 1px solid #eee;
+  height: 120px;
+  width: 100%;
+  margin-top: 10px;
+  color: #999;
+}
+.fb .fb_contain .fb_input {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #eee;
+}
+.fb .fb_contain .fb_input input {
+  width: 100%;
+  display: block;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding-left: 10px;
+}
+.fb .fb_contain textarea {
+  display: block;
+  width: 100%;
+  height: 80px;
+  resize: none;
+  padding-left: 10px;
+  color: #999;
+  border: none;
+  background: transparent;
+  margin-top: 10px;
+}
+.fb .say_fb {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  overflow: hidden;
+  line-height: 30px;
+}
+.fb .say_fb img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  float: left;
+  margin-right: 10px;
+}
+.fb .say_fb span {
+  color: #999;
+  font-size: 14px;
+  margin-right: 10px;
+  float: left;
+}
+.fb .say_fb select {
+  float: right;
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin-right: 15px;
+}
+.fb .say_fb div {
+  float: right;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  background: #56d37e;
 }
