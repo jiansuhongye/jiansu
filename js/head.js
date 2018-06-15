@@ -132,7 +132,7 @@ if(localStorage.getItem('username')&&localStorage.getItem('password')){
       success:function(data){
       
       $('.logonin').html('您好，'+data.data.nickname);
-      Alert('欢迎您，'+data.data.nickname)
+      Alert('欢迎您，'+data.data.nickname);
           
       }
   })
@@ -158,16 +158,16 @@ $(".login_text button").eq(0).on("click", function() {
         password:$('.login_text input').eq(1).val()
       },
       success:function(data){
-        console.log(data)
-         flag = true
+        console.log(data);
+         flag = true;
           if(data.code == 500){
             Alert('用户名或密码错误')
-            $('.login_text input').eq(0).val('')
-            $('.login_text input').eq(1).val('')
+            $('.login_text input').eq(0).val('');
+            $('.login_text input').eq(1).val('');
           }else{
             $('.logonin').html('您好，'+data.data.nickname);
-            Alert('欢迎您，'+data.data.nickname)
-            flag = true
+            Alert('欢迎您，'+data.data.nickname);
+            flag = true;
             localStorage.setItem('username',$('.login_text input').eq(0).val());
             localStorage.setItem('password',$('.login_text input').eq(1).val());
             localStorage.setItem('nickname',data.data.nickname);
@@ -216,6 +216,6 @@ $('.head ul li a').eq(2).on('click',function(){
   if(localStorage.getItem('username')){
     window.location.href = '../pages/tabpage.html'
   }else{
-    Alert('未登录，请先登录。')
+    Alert('未登录，请先登录。');
   }
 })
