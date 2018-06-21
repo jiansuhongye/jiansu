@@ -7,7 +7,6 @@
   width: 1200px;
   height: 93px;
   margin: 0 auto;
-  overflow: hidden;
 }
 .ngh_head div.head img {
   margin-right: 60px;
@@ -71,6 +70,7 @@
   height: 30px;
   margin-top: 33px;
   line-height: 30px;
+  position: relative;
 }
 .ngh_head div.head .ngh_gn a:hover {
   color: #31a080;
@@ -222,4 +222,17 @@ footer .foot_contain .bq .bq-bottom {
   line-height: 21px;
   text-align: right;
   color: #999;
+}
+.ulnone {
+  float: none !important;
+}
+.ulnone li {
+  font-size: 12px;
+  color: #999;
+  display: block !important;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+#hideDiv {
+  border-radius: 4px;
 }

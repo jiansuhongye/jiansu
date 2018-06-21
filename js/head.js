@@ -30,13 +30,12 @@ var str =
   '<a href="##">' +
   '  <img src="../images/huifu.png" style="width:30px;height:30px;margin-top:0" alt="">我的回复' +
   "</a>" +
- 
   '<a href="##" style="margin-left:10px;" class="logonin">' +
   " 登录" +
   "</a>" +
   "</div>" +
   "</div>" +
-  "</header>"
+  "</header>";
   
 var loginstr = '<div class="login">'+
 '<h6>加入我们</h6>'+
@@ -73,7 +72,7 @@ var loginstr = '<div class="login">'+
         '<button>登录简诉</button>'+
         '<button style="float:right;background:#fda158">注册账号</button>'+
     '</div>'+
-'</div>'
+'</div>';
 
 $('body').append(loginstr)
 var strfoot =
@@ -130,8 +129,19 @@ if(localStorage.getItem('username')&&localStorage.getItem('password')){
       password:localStorage.getItem('password')
       },
       success:function(data){
-      
-      $('.logonin').html('您好，'+data.data.nickname);
+        var str = 
+        '<div>您好，'+data.data.nickname+'</div>'+
+        '<div style="background-color: rgb(216, 217, 235);width:66px;height:60px;text-align: center;position: absolute;right:0;z-index: 9;display:none;" id = "hideDiv">'+
+        '<ul class = "ulnone">'+
+            '<li style="height: 30px;line-height: 30px;margin:0;padding:0;" id= "usernameL">'+
+            data.data.nickname+
+            '</li>'+
+            '<li style="height: 30px;line-height: 30px;margin:0;padding:0;" id = "exit">'+
+            '退出'+
+              '</li>'+
+        '</ul>'+
+    '</div>';
+      $('.logonin').html(str);
       Alert('欢迎您，'+data.data.nickname);
           
       }
@@ -148,7 +158,7 @@ $(".logonin").on("click", function(e) {
   
 });
 
-
+ 
 $(".login_text button").eq(0).on("click", function() {
     $.ajax({
       url:url+'/user/login',
@@ -165,7 +175,19 @@ $(".login_text button").eq(0).on("click", function() {
             $('.login_text input').eq(0).val('');
             $('.login_text input').eq(1).val('');
           }else{
-            $('.logonin').html('您好，'+data.data.nickname);
+            var str = '<div>您好，'+data.data.nickname+'</div>'+
+            '<div style="background-color: #ccc;width:66px;height:60px;text-align: center;position: absolute;right:0;z-index: 9;display:none;" id = "hideDiv">'+
+            '<ul class = "ulnone">'+
+                '<li style="height: 30px;line-height: 30px;margin:0;padding:0;">'+
+                data.data.nickname+
+                '</li>'+
+                '<li style="height: 30px;line-height: 30px;margin:0;padding:0;" id = "exit">'+
+                '退出'+
+                  '</li>'+
+            '</ul>'+
+        '</div>';
+            // $('.logonin').html('<div>'+'您好，'+data.data.nickname+'</div>');
+            $('.logonin').html(str);
             Alert('欢迎您，'+data.data.nickname);
             flag = true;
             localStorage.setItem('username',$('.login_text input').eq(0).val());
@@ -214,8 +236,23 @@ $(".login_text button").eq(3).on("click", function() {
 //观点进入要判断登录状态
 $('.head ul li a').eq(2).on('click',function(){
   if(localStorage.getItem('username')){
-    window.location.href = '../pages/tabpage.html'
+    window.location.href = '../pages/tabpage.html';
   }else{
     Alert('未登录，请先登录。');
   }
-})
+});
+$('.logonin').hover(
+    function () {
+        $('#hideDiv').css("display","block");
+        // console.log($("#exit"))
+        $("#exit").click(
+          function () { 
+            localStorage.removeItem('username');
+            window.location.reload();
+           }
+        )
+      },function(){
+        $('#hideDiv').css("display","none");
+      }
+);
+
